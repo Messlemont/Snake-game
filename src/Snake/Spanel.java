@@ -46,7 +46,17 @@ public class Spanel extends JPanel implements ActionListener {
         start();
     }
 
-
+    public void reset(){
+       totApples = 0;
+       snakeBody = 6;
+       int blank[] = new int[TotalSpaces];
+        for(int i = snakeBody; i >= 0; i--) {
+            x[i] = blank[i];
+            y[i] = blank[i];
+        }
+        direction = 'R';
+        start();
+    }
 
     public void start(){
         //Spawns an apple, sets up and starts timer, changes running to true
@@ -65,12 +75,17 @@ public class Spanel extends JPanel implements ActionListener {
         //This should place the 'Game Over!' message at the center of the game
         g.drawString("Game Over!",(WIDTH - metrics.stringWidth("Game Over!"))/2,HEIGHT/2);
 
+        g.setFont(new Font("TimesRoman",Font.BOLD,25));
+        FontMetrics metrics2 = getFontMetrics(g.getFont());
+        //This should place the 'Press any key to restart.' right under the 'Game Over!' text
+        g.drawString("Press any key to restart.",(WIDTH - metrics2.stringWidth("Press any key to restart."))/2,(HEIGHT + metrics.getHeight())/2);
+
         g.setColor(Color.green);
         g.setFont(new Font("TimesRoman",Font.BOLD,50));
-        FontMetrics metrics2 = getFontMetrics(g.getFont());
+        FontMetrics metrics3 = getFontMetrics(g.getFont());
 
         //The score should now be displayed centered on the top of the panel
-        g.drawString("Final score: " + totApples,(WIDTH - metrics2.stringWidth("Finsl score: " + totApples))/2,g.getFont().getSize());
+        g.drawString("Final score: " + totApples,(WIDTH - metrics3.stringWidth("Finsl score: " + totApples))/2,g.getFont().getSize());
     }
 
     public void paintComponent(Graphics g){
@@ -199,37 +214,44 @@ public class Spanel extends JPanel implements ActionListener {
 
 
     public class MyKeyAdaptor extends KeyAdapter {
-        public void keyPressed(KeyEvent e){
-            switch(e.getKeyCode()){
-                //Check that the snake isnt trying to turn into itself
-                case KeyEvent.VK_UP:
-                    if (direction != 'D'){
-                        direction = 'U';
-                    }
-                    break;
-                case KeyEvent.VK_DOWN:
-                    if (direction != 'U'){
-                        direction = 'D';
-                    }
-                    break;
-                case KeyEvent.VK_LEFT:
-                    if (direction != 'R'){
-                        direction = 'L';
-                    }
-                    break;
-                case KeyEvent.VK_RIGHT:
-                    if (direction != 'L'){
-                        direction = 'R';
-                    }
-                    break;
-                //The player can now pause/unpause the game using the space bar
-                case KeyEvent.VK_SPACE:
-                    if(paused){
-                        resume();
-                    }else{
-                        pause();
-                    }
-                    break;
+        public void keyPressed(KeyEvent e) {
+            char temp = direction;
+            if (running) {
+                switch (e.getKeyCode()) {
+                    //Check that the snake isnt trying to turn into itself
+                    case KeyEvent.VK_UP:
+                        if (direction != 'D') {
+                            direction = 'U';
+                        }
+                        break;
+                    case KeyEvent.VK_DOWN:
+                        if (direction != 'U') {
+                            direction = 'D';
+                        }
+                        break;
+                    case KeyEvent.VK_LEFT:
+                        if (direction != 'R') {
+                            direction = 'L';
+                        }
+                        break;
+                    case KeyEvent.VK_RIGHT:
+                        if (direction != 'L') {
+                            direction = 'R';
+                        }
+                        break;
+                    //The player can now pause/unpause the game using the space bar
+                    case KeyEvent.VK_SPACE:
+                        if (paused) {
+                            //Stops players from changing direction while paused
+                            direction = temp;
+                            resume();
+                        } else {
+                            pause();
+                        }
+                        break;
+                }
+            }else{
+                reset();
             }
         }
     }
