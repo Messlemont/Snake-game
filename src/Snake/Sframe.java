@@ -4,15 +4,17 @@ import javax.swing.*;
 
 public class Sframe extends JFrame {
     Sframe(){
-        Spanel gamePanel = new Spanel();
+        //Spanel gamePanel = new Spanel();
+        MouseMode gamePanel = new MouseMode();
         this.add(gamePanel);
+
 
         this.setTitle("~<:====> Snake! <====:>~");                                                                      //<====:>~ is meant to look like a lil snake
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
-        this.pack();                        //Sframe will fit itself around what we add to the frame
+        this.pack();                                                                                                    //Sframe will fit itself around what we add to the frame
         this.setVisible(true);
 
-        this.setLocationRelativeTo(null);   //Means out game when opened will appear in the centre of the screen
+        this.setLocationRelativeTo(null);                                                                               //Means out game when opened will appear in the centre of the screen
     }
 }
