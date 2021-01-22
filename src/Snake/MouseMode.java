@@ -6,8 +6,9 @@ public class MouseMode extends Spanel {
     /* In this game mode instead of the APPLE we have the MOUSE. the
     mouse is just like the apple except it can move around the board */
 
-    //We'll use this so the mouse moves at half the speed of the snake
-    boolean letMove = false;
+    //To make the mouse move at a reasonable pace it needs to move slower than DELAY, movecount will help with this
+    int moveCount = 0;
+
 
     public void mouseMove(){
         //Gets a random number 0, 1, 2 or 3 (Up, down, left or right)
@@ -15,13 +16,15 @@ public class MouseMode extends Spanel {
         int newX = 0;
         int newY = 0;
 
-        int count = 0;
+
+        //loopCount keeps track of how many times we've tried to move out of a certain space, valid will represent if [newX,newY] is a valid space or not
+        int loopCount = 0;
         boolean valid = false;
 
 
-        while(valid == false) {
+        do{
             //If we go through the loop 6 times we'll assume there are no valid spaces for the mouse to move to and will let it stay still
-            if(count == 6){
+            if(loopCount == 6){
                 newX = appleX;
                 newY = appleY;
                 break;
@@ -52,8 +55,8 @@ public class MouseMode extends Spanel {
 
             //Check to see if the new space is valid
             valid = checkSpace(newX,newY);
-            count++;
-        }
+            loopCount++;
+        }while(valid == false);
 
         //Now that we have a valid move for the mouse we assign its co-ords to that
         appleX = newX;
@@ -94,9 +97,15 @@ public class MouseMode extends Spanel {
     public void actionPerformed(ActionEvent e) {
         if (running){
             move();
-            mouseMove();
             checkApple();
             checkCrash();
+
+            //This means we move the mouse at a 10th of the speed we move the snake
+            moveCount++;
+            if((moveCount % 10) == 0) {
+                moveCount = 0;
+                mouseMove();
+            }
         }
         repaint();
     }
