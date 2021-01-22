@@ -9,7 +9,6 @@
     <list default="true" id="94cc2b42-d652-4d46-9e72-ecc6bb293229" name="Default Changelist" comment="Player can now reset the game once they get a game over.">
       <change beforePath="$PROJECT_DIR$/Snake.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Snake.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Snake_jar/Snake.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Snake_jar/Snake.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Snake/Snake/MouseMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/Snake/MouseMode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Snake/MouseMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Snake/MouseMode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CardLayoutExample.java" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -74,7 +73,9 @@
       <workItem from="1609870056685" duration="15567000" />
       <workItem from="1610144195527" duration="14106000" />
       <workItem from="1610820980812" duration="4889000" />
-      <workItem from="1611328785341" duration="1442000" />
+      <workItem from="1611328785341" duration="2702000" />
+      <workItem from="1611331558966" duration="6000" />
+      <workItem from="1611331715717" duration="538000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1610144537452</created>
@@ -116,34 +117,46 @@
     </state>
     <state x="393" y="7" key="CommitChangelistDialog2/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1611330235491" />
     <state x="393" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1610461258570" />
-    <state width="1493" height="31" key="GridCell.Tab.0.bottom" timestamp="1611245001353">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1611331509627">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1611331509627" />
+    <state width="1493" height="217" key="GridCell.Tab.0.bottom" timestamp="1611331539349">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="217" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1611331539349" />
     <state width="1493" height="31" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611245001353" />
-    <state width="1493" height="31" key="GridCell.Tab.0.center" timestamp="1611245001352">
+    <state width="1493" height="217" key="GridCell.Tab.0.center" timestamp="1611331539348">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="217" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1611331539348" />
     <state width="1493" height="31" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611245001352" />
-    <state width="1493" height="31" key="GridCell.Tab.0.left" timestamp="1611245001352">
+    <state width="1493" height="217" key="GridCell.Tab.0.left" timestamp="1611331539348">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="217" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1611331539348" />
     <state width="1493" height="31" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611245001352" />
-    <state width="1493" height="31" key="GridCell.Tab.0.right" timestamp="1611245001353">
+    <state width="1493" height="217" key="GridCell.Tab.0.right" timestamp="1611331539348">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="217" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1611331539348" />
     <state width="1493" height="31" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611245001353" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1610128255142">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610128255142" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1611328787445">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1611331558660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1611328787445" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1611331558660" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1610823531467" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610152667931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1610152667931" />
+    <state x="431" y="145" key="search.everywhere.popup" timestamp="1611331532927">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" key="search.everywhere.popup/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1611331532927" />
   </component>
 </project>

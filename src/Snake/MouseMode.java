@@ -13,8 +13,8 @@ public class MouseMode extends Spanel {
     public void mouseMove(){
         //Gets a random number 0, 1, 2 or 3 (Up, down, left or right)
         int mouseDirection;
-        int newX = 0;
-        int newY = 0;
+        int newX = appleX;
+        int newY = appleY;
 
 
         //loopCount keeps track of how many times we've tried to move out of a certain space, valid will represent if [newX,newY] is a valid space or not
